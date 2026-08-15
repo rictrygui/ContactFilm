@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Film</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* HERO */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://i.postimg.cc/vHg7ZsRC/Chat-GPT-Image-9-de-jul-de-2026-07-56-37.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+.hero .conteudo{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:25px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.8);
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:40px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.8);
+}
+
+.btn{
+
+    display:inline-block;
+    padding:18px 45px;
+    background:#25D366;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+    background:#1ebe5d;
+
+}
+
+/* PROBLEMA */
+
+.problema{
+
+    padding:90px 10%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    background:white;
+
+}
+
+.texto{
+    flex:1;
+}
+
+.texto h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.texto span{
+    color:#25D366;
+}
+
+.texto p{
+    font-size:18px;
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+.texto ul{
+    list-style:none;
+    margin-bottom:35px;
+}
+
+.texto li{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.imagem{
+    flex:1;
+}
+
+.imagem img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* TECNOLOGIA */
+
+.dark{
+
+    background:#071329;
+    color:white;
+    padding:90px 10%;
+    display:flex;
+    align-items:center;
+    gap:60px;
+
+}
+
+.dark img{
+
+    width:100%;
+    max-width:520px;
+    border-radius:20px;
+
+}
+
+.dark h2{
+
+    font-size:42px;
+    margin-bottom:20px;
+
+}
+
+.dark p{
+
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+
+}
+
+/* CURSO */
+
+.curso{
+
+    background:#252525;
+    color:white;
+
+    padding:90px 10%;
+
+    display:flex;
+    align-items:center;
+
+    gap:60px;
+
+}
+
+.curso img{
+
+    width:100%;
+    max-width:520px;
+
+    border-radius:20px;
+
+}
+
+.curso h2{
+
+    font-size:42px;
+    margin-bottom:20px;
+
+}
+
+.curso p{
+
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+
+}
+
+/* BENEFÍCIOS */
+
+.beneficios{
+
+    padding:90px 8%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    background:#f4f4f4;
+
+}
+
+.card{
+
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card h3{
+
+    font-size:45px;
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    font-size:18px;
+
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+
+    padding:90px 10%;
+    text-align:center;
+    background:white;
+
+}
+
+.depoimentos h2{
+
+    font-size:42px;
+    margin-bottom:45px;
+
+}
+
+.cards{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
+.pessoa{
+
+    width:320px;
+    padding:35px;
+    border-radius:20px;
+    background:#fafafa;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    text-decoration:none;
+    color:#222;
+
+    transition:.3s;
+
+}
+
+.pessoa:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.pessoa strong{
+
+    color:#25D366;
+
+}
+
+/* BOTÃO WHATSAPP */
+
+.whatsapp{
+
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:70px;
+    height:70px;
+
+    background:#25D366;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:40px;
+
+}
+
+footer a{
+
+    color:#25D366;
+    text-decoration:none;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.problema,
+.dark,
+.curso{
+    flex-direction:column;
+}
+
+.beneficios{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="conteudo">
+
+<h1>
+
+Transforme o calor em conforto e desfrute do seu lar com películas de controle solar e bloqueio UV.
+
+</h1>
+
+<p>
+
+Entregamos conforto térmico, privacidade e segurança para sua residência ou empresa.
+
+</p>
+
+<a href="https://api.whatsapp.com/send?phone=5511971352137&text=Gostaria%20de%20Solicitar%20um%20Orçamento!
+target="_blank"
+class="btn">
+
+Solicitar orçamento
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PROBLEMA -->
+
+<section class="problema">
+
+    <div class="texto">
+
+        <h2>
+            Sua casa está quente, clara demais e
+            <span>sem privacidade?</span>
+        </h2>
+
+        <p>
+            O calor e a claridade excessiva diminuem o conforto do ambiente.
+            As películas Contact Film reduzem significativamente a entrada de calor,
+            bloqueiam até 99% dos raios UV e proporcionam muito mais privacidade,
+            mantendo a elegância dos vidros.
+        </p>
+
+        <ul>
+
+            <li>✔ Redução do calor interno</li>
+            <li>✔ Bloqueio de até 99% dos raios UV</li>
+            <li>✔ Mais privacidade para sua família</li>
+            <li>✔ Proteção de móveis, pisos e cortinas</li>
+
+        </ul>
+
+        <a href="https://api.whatsapp.com/send?phone=5511971352137&text=Gostaria%20de%20Solicitar%20um%20Orçamento!"
+           target="_blank"
+           class="btn">
+
+            Solicitar orçamento
+
+        </a>
+
+    </div>
+
+    <div class="imagem">
+
+        <img src="https://i.postimg.cc/yNdc24TQ/foto-2.jpg" alt="Sala residencial">
+
+    </div>
+
+</section>
+
+
+<!-- TECNOLOGIA -->
+
+<section class="dark">
+
+    <img src="https://i.postimg.cc/RVBf4nRS/foto-3.jpg" alt="Película instalada">
+
+    <div>
+
+        <h2>
+            A tecnologia que transforma seu lar em um ambiente elegante, fresco e seguro.
+        </h2>
+
+        <p>
+            Trabalhamos com películas residenciais e comerciais de alta qualidade,
+            proporcionando conforto térmico, proteção contra raios UV, redução do
+            brilho excessivo e muito mais segurança para seu imóvel.
+        </p>
+
+        <a href="https://api.whatsapp.com/send?phone=5511971352137&text=Gostaria%20de%20Solicitar%20um%20Orçamento!"
+           target="_blank"
+           class="btn">
+
+            Solicitar película agora
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CURSO DE INSULFILM -->
+
+<section class="curso">
+
+    <img src="https://i.postimg.cc/qR9SKVY6/Whats-App-Image-2026-08-08-at-07-21-20.jpg" alt="Curso de instalação de insulfilm">
+
+    <div>
+
+        <h2>
+            Aprenda insulfilm e transforme conhecimento em renda.
+        </h2>
+
+        <p>
+        Aprenda técnicas profissionais de instalação, preparação do vidro, aplicação e acabamento. Um curso completo para quem quer começar do zero e desenvolver uma habilidade cada vez mais valorizada no mercado.
+        </p>
+
+        <a href="https://api.whatsapp.com/send?phone=5511971352137&text=Gostaria%20de%20Aprender%20o%20Curso!"
+           target="_blank"
+           class="btn">
+
+           QUERO APRENDER!
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BENEFÍCIOS -->
+
+<section class="beneficios">
+
+    <div class="card">
+        <h3>☀️</h3>
+        <p>Redução de até 80% do calor solar.</p>
+    </div>
+
+    <div class="card">
+        <h3>🛡️</h3>
+        <p>Proteção contra até 99% dos raios UV.</p>
+    </div>
+
+    <div class="card">
+        <h3>🏠</h3>
+        <p>Mais conforto e privacidade.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡</h3>
+        <p>Instalação rápida, limpa e sem reformas.</p>
+    </div>
+
+    <div class="card">
+        <h3>✨</h3>
+        <p>Visual moderno sem alterar a estética do vidro.</p>
+    </div>
+
+    <div class="card">
+        <h3>✔</h3>
+        <p>Produtos de alta qualidade e longa durabilidade.</p>
+    </div>
+
+</section>
+
+
+<!-- DEPOIMENTOS -->
+
+<section class="depoimentos">
+
+    <h2>Quem experimentou, recomenda.</h2>
+
+    <div class="cards">
+
+        <a href="https://share.google/EXX11xl4wfCgftTyp"
+           target="_blank"
+           class="pessoa">
+
+            ⭐⭐⭐⭐⭐
+
+            <br><br>
+
+            "Tudo feito com excelência!"
+
+            <br><br>
+
+            <strong>Ver avaliação completa →</strong>
+
+        </a>
+
+        <a href="https://share.google/EXX11xl4wfCgftTyp"
+           target="_blank"
+           class="pessoa">
+
+            ⭐⭐⭐⭐⭐
+
+            <br><br>
+
+            "Atendimento perfeito desde o primeiro contato. Um trabalho impecável e de qualidade!"
+
+            <br><br>
+
+            <strong>Ver avaliação completa →</strong>
+
+        </a>
+
+        <a href="https://share.google/EXX11xl4wfCgftTyp"
+           target="_blank"
+           class="pessoa">
+
+            ⭐⭐⭐⭐⭐
+
+            <br><br>
+
+            "Trabalho perfeito!"
+
+            <br><br>
+
+            <strong>Ver avaliação completa →</strong>
+
+        </a>
+
+    </div>
+
+    <br><br><br>
+
+    <a href="https://share.google/EXX11xl4wfCgftTyp"
+       target="_blank"
+       class="btn">
+
+        ⭐ Ver todas as avaliações no Google
+
+    </a>
+
+</section>
+
+
+<!-- RODAPÉ -->
+
+<footer>
+
+    <h2>CONTACT FILM</h2>
+
+    <br>
+
+    <p>
+        Especialistas em Películas de Controle Solar,
+        Segurança e Privacidade.
+    </p>
+
+    <br>
+
+    <p>
+
+        📱
+
+        <a href="https://api.whatsapp.com/send?phone=5511971352137"
+           target="_blank">
+
+            (11) 97135-2137
+
+        </a>
+
+    </p>
+
+    <br>
+
+    <p>
+
+        📷
+
+        <a href="https://www.instagram.com/contactfilm_adesivos"
+           target="_blank">
+
+            @contactfilm_adesivos
+
+        </a>
+
+    </p>
+
+    <br>
+
+    <p>
+
+        ⭐
+
+        <a href="https://share.google/EXX11xl4wfCgftTyp"
+           target="_blank">
+
+            Avaliações no Google
+
+        </a>
+
+    </p>
+
+    <br>
+
+    <p>
+
+        © 2026 Contact Film - Todos os direitos reservados.
+
+    </p>
+
+</footer>
+
+
+<!-- BOTÃO FLUTUANTE -->
+
+<a href="https://api.whatsapp.com/send?phone=5511971352137&text=Gostaria%20de%20Solicitar%20um%20Orçamento!"
+   class="whatsapp"
+   target="_blank">
+
+    💬
+
+</a>
+
+</body>
+
+</html>
